@@ -9,8 +9,8 @@ types of information the tool can report and finally there is a part on the vari
 
  *It currently supports version 2, a version 3 is on the agenda - if the tool is found useful.*
  
-  [![Build status](https://travis-ci.org/AllanHoejgaardJensen/open-api-diff.svg?branch=master)](https://travis-ci.org/AllanHoejgaardJensen/open-api-diff)
-  [![Coverage Status](https://codecov.io/gh/AllanHoejgaardJensen/open-api-diff/coverage.svg?branch=master)](https://codecov.io/gh/AllanHoejgaardJensen/open-api-diff)
+  [![Build status](https://travis-ci.org/openapi-tools/open-api-diff.svg?branch=master)](https://travis-ci.org/openapi-tools/open-api-diff)
+  [![Coverage Status](https://codecov.io/gh/openapi-tools/open-api-diff/coverage.svg?branch=master)](https://codecov.io/gh/openapi-tools/open-api-diff)
 
 ## Value proposal
 The value proposal is to make a tool that helps service developer to keep on evolving their services in the highest 
@@ -123,7 +123,7 @@ show something visual along with an explanation of why this finding exist and wh
 The current edition is merely a tool in its early stages, if this is found useful, it could evolve into a more elaborate 
 tool. Currently this seems to require some consensus on the opinionated parts in order to get the most value from the 
 comparison of APIs. Support for configuration of a response, header, etc. profile, that suits individual needs. 
-Support for API capabilities as shown in the [api capabilities](https://github.com/Nykredit/api-capabilities) 
+Support for API capabilities as shown in the [api capabilities](https://github.com/openapi-tools/api-capabilities) 
 is one of the things under consideration, but first a stable version of the current version needs to be verified by others 
 in order to see the potential for the tool.
 
