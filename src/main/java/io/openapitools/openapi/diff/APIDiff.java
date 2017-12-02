@@ -31,7 +31,7 @@ import org.slf4j.LoggerFactory;
  * The comparison can be simple just looking at resources, parameters etc. or can be more complex.
  * <p>
  * In the more complex mode the compliance comprises content-types, response headers, projections,
- * versions for a given endpoint or for the api as such according to the rules outlined by github.com/allanhoejgaardjensen
+ * versions for a given endpoint or for the api as such according to the rules outlined by github.com/openapi-tools
  * <p>
  * The comparison may include HATEOAS (HAL) compatibility issues for backwards compliance as well.
  */

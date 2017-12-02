@@ -30,7 +30,7 @@ public class Maps<K, V> {
 
     private Map<K, V> added = new LinkedHashMap<>();
     private Map<K, V> removed = new LinkedHashMap<>();
-    private List<K> common = new ArrayList<>();;
+    private List<K> common = new ArrayList<>();
 
     private Maps() {
         //empty

@@ -1,6 +1,7 @@
 /src/test/h2-data/account.trace.db
 .DS_Store
 target
+dependency-reduced-pom.xml
 ### Eclipse template
 *.pydevproject
 .metadata

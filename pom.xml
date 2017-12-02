@@ -8,7 +8,7 @@
         <version>7</version>
     </parent>
 
-    <groupId>dk.hoejgaard</groupId>
+    <groupId>io.openapitools</groupId>
     <artifactId>open-api-diff</artifactId>
     <version>0.10.1</version>
     <packaging>jar</packaging>
@@ -34,37 +34,44 @@
         <developer>
             <name>Allan Hoejgaard Jensen</name>
             <email>allan@hoejgaard-jensen.dk</email>
+            <organization>Open API Tools</organization>
+            <organizationUrl>https://github.com/openapi-tools</organizationUrl>
         </developer>
-    </developers>
+        <developer>
+            <name>Thor Anker Kvisgård Lange</name>
+            <email>thor.lange@gmail.com</email>
+            <organization>Open API Tools</organization>
+            <organizationUrl>https://github.com/openapi-tools</organizationUrl>
+        </developer>    </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:allanhoejgaardjensen/open-api-diff.git</connection>
-        <developerConnection>scm:git:git@github.com:allanhoejgaardjensen/open-api-diff.git</developerConnection>
-        <url>git@github.com:allanhoejgaardjensen/open-api-diff.git</url>
+        <connection>scm:git:git@github.com:openapi-tools/open-api-diff.git</connection>
+        <developerConnection>scm:git:git@github.com:openapi-tools/open-api-diff.git</developerConnection>
+        <url>git@github.com:openapi-tools/open-api-diff.git</url>
     </scm>
 
     <properties>
         <changelog.version>2.3</changelog.version>
         <checkstyle.plugin.version>2.17</checkstyle.plugin.version>
-        <checkstyle.version>7.8.2</checkstyle.version>
-        <dependency.version>3.0.0</dependency.version>
+        <checkstyle.version>8.5</checkstyle.version>
+        <dependency.version>3.0.1</dependency.version>
         <findbugs.version>3.0.4</findbugs.version>
-        <jacoco.version>0.7.8</jacoco.version>
+        <jackson.core.version>2.8.4</jackson.core.version>
+        <jacoco.version>0.7.9</jacoco.version>
         <jdk.min.version>1.8</jdk.min.version>
         <jdk.version>1.8</jdk.version>
         <junit.version>4.12</junit.version>
         <jxr.version>2.5</jxr.version>
-        <j2html.version>1.0.0</j2html.version>
-        <pmd.plugin.version>3.7</pmd.plugin.version>
-        <pmd.version>5.5.2</pmd.version>
+        <j2html.version>1.2.0</j2html.version>
+        <pmd.plugin.version>3.8</pmd.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.info.reportsplugin.version>2.9</project.info.reportsplugin.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <slf4j.version>1.7.25</slf4j.version>
-        <swagger-jaxrs.version>1.5.12</swagger-jaxrs.version>
-        <swagger-compat-spec-parser.version>1.0.29</swagger-compat-spec-parser.version>
-        <swagger.parser.version>1.0.29</swagger.parser.version>
-        <versions.version>2.3</versions.version>
+        <swagger-jaxrs.version>1.5.17</swagger-jaxrs.version>
+        <swagger-compat-spec-parser.version>1.0.33</swagger-compat-spec-parser.version>
+        <swagger.parser.version>1.0.33</swagger.parser.version>
+        <versions.version>2.4</versions.version>
     </properties>
 
     <distributionManagement>
@@ -110,12 +117,41 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
             </dependency>
+           <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>18.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-yaml</artifactId>
+                <version>${jackson.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -133,17 +169,36 @@
             <artifactId>swagger-compat-spec-parser</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.j2html</groupId>
             <artifactId>j2html</artifactId>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -228,6 +283,35 @@
                         </executions>
                     </plugin>
                     <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-shade-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>shade</goal>
+                                </goals>
+                                <configuration>
+                                    <finalName>${project.artifactId}-${project.version}</finalName>
+                                    <artifactSet>
+                                        <excludes>
+                                            <exclude>junit:junit</exclude>
+                                            <exclude>log4j:log4j:jar:</exclude>
+                                        </excludes>
+                                    </artifactSet>
+                                    <transformers>
+                                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                            <manifestEntries>
+                                                <Main-Class>io.openapitools.openapi.diff.OpenAPIDiff</Main-Class>
+                                            </manifestEntries>
+                                        </transformer>
+                                    </transformers>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
                         <version>${jacoco.version}</version>
@@ -252,8 +336,8 @@
                         <version>${checkstyle.plugin.version}</version>
                         <configuration>
                             <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-                            <includes>**/dk/hoejgaard/**/*.java</includes>
-                            <excludes>**/dk/hoejgaard/**/OpenAPIDiff.java</excludes>
+                            <includes>**/io/apitools/**/*.java</includes>
+                            <excludes>**/io/apitools/**/OpenAPIDiff.java</excludes>
                             <configLocation>${project.basedir}/rules/checkstyle.xml</configLocation>
                             <includeTestResources>false</includeTestResources>
                         </configuration>
@@ -323,8 +407,8 @@
                 <version>${checkstyle.plugin.version}</version>
                 <configuration>
                     <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-                    <includes>**/dk/hoejgaard/**/*.java</includes>
-                    <excludes>**/dk/hoejgaard/**/OpenAPIDiff.java</excludes>
+                    <includes>**/io/apitools/**/*.java</includes>
+                    <excludes>**/io/apitools/**/OpenAPIDiff.java</excludes>
                     <configLocation>${project.basedir}/rules/checkstyle.xml</configLocation>
                     <includeTestResources>false</includeTestResources>
                 </configuration>
@@ -348,7 +432,7 @@
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>${findbugs.version}</version>
                 <configuration>
-                    <onlyAnalyze>dk.hoejgaard.-</onlyAnalyze>
+                    <onlyAnalyze>io.openapitools.-</onlyAnalyze>
                 </configuration>
                 <executions>
                     <execution>
@@ -369,7 +453,7 @@
                     </rulesets>
                     <targetJdk>${jdk.version}</targetJdk>
                     <includes>
-                        <include>**/dk/hoejgaard/**/*.java</include>
+                        <include>**/io/apitools/**/*.java</include>
                     </includes>
                     <excludes>
                     </excludes>
@@ -403,6 +487,41 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>${project.artifactId}-${project.version}</finalName>
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>junit:junit</exclude>
+                                </excludes>
+                            </artifactSet>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Main-Class>io.openapitools.openapi.diff.OpenAPIDiff</Main-Class>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                        <version>${slf4j.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
         </plugins>
     </build>
 
@@ -424,8 +543,8 @@
                 <version>${checkstyle.plugin.version}</version>
                 <configuration>
                     <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-                    <includes>**/dk/hoejgaard/**/*.java</includes>
-                    <excludes>**/dk/hoejgaard/**/OpenAPIDiff.java</excludes>
+                    <includes>**/io/apitools/**/*.java</includes>
+                    <excludes>**/io/apitools/**/OpenAPIDiff.java</excludes>
                     <configLocation>${project.basedir}/rules/checkstyle.xml</configLocation>
                     <includeTestResources>false</includeTestResources>
                 </configuration>
@@ -435,7 +554,7 @@
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>${findbugs.version}</version>
                 <configuration>
-                    <onlyAnalyze>dk.hoejgaard.-</onlyAnalyze>
+                    <onlyAnalyze>io.openapitools.-</onlyAnalyze>
                 </configuration>
             </plugin>
             <plugin>
@@ -449,7 +568,7 @@
                     </rulesets>
                     <targetJdk>${jdk.version}</targetJdk>
                     <includes>
-                        <include>**/dk/hoejgaard/**/*.java</include>
+                        <include>**/io/openapitools/**/*.java</include>
                     </includes>
                     <excludes>
                     </excludes>
@@ -463,7 +582,7 @@
                 <version>${jxr.version}</version>
                 <configuration>
                     <includes>
-                        <include>**/dk/hoejgaard/**/*.java</include>
+                        <include>**/io/apitools/**/*.java</include>
                     </includes>
                     <excludes>
                     </excludes>

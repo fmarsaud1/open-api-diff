@@ -2,13 +2,13 @@
 
 The absolute most simple way to get started, is issuing the following command after building the project:
 
-     java -Djava.ext.dirs=open-api-diff/sample-api:lib 
-          -cp target/open-api-diff-0.10.1.jar dk.hoejgaard.openapi.diff.OpenAPIDiff
+     java -Djava.ext.dirs=open-api-diff/sample-api 
+          -cp target/open-api-diff-0.10.1.jar io.openapitools.openapi.diff.OpenAPIDiff
       
 That is equivalent to:
 
-    java -Djava.ext.dirs=open-api-diff/sample-api:lib 
-         -cp target/open-api-diff-0.10.1.jar dk.hoejgaard.openapi.diff.OpenAPIDiff 
+    java -Djava.ext.dirs=open-api-diff/sample-api 
+         -cp target/open-api-diff-0.10.1.jar io.openapitools.openapi.diff.OpenAPIDiff 
              ./sample-api/elaborate_example_v1.json 
              ./sample-api/elaborate_example_v3f.json 
              ./target/output/reports 
@@ -17,8 +17,8 @@ That is equivalent to:
       
 That is equivalent to:
 
-    java -Djava.ext.dirs=open-api-diff/sample-api:lib 
-         -cp target/open-api-diff-0.10.1.jar dk.hoejgaard.openapi.diff.OpenAPIDiff 
+    java -Djava.ext.dirs=open-api-diff/sample-api 
+         -cp target/open-api-diff-0.10.1.jar io.openapitools.openapi.diff.OpenAPIDiff 
              ./sample-api/elaborate_example_v1.json 
              ./sample-api/elaborate_example_v3f.json 
              ./target/output/reports 
@@ -27,8 +27,8 @@ That is equivalent to:
 
 The syntax is (with no line breaks):
 
-    java -Djava.ext.dirs=open-api-diff/sample-api:lib 
-         -cp target/open-api-diff-0.10.1.jar dk.hoejgaard.openapi.diff.OpenAPIDiff
+    java -Djava.ext.dirs=open-api-diff/sample-api 
+         -cp target/open-api-diff-0.10.1.jar io.openapitools.openapi.diff.OpenAPIDiff
              [existing API = ./sample-api/elaborate_example_v1.json] 
              [future API = ./sample-api/elaborate_example_v3f.json] 
              [target report folder = ./target/output/reports] 
@@ -38,8 +38,8 @@ The syntax is (with no line breaks):
 
 If you want a Markdown report (use the .md file extension):
 
-    java -Djava.ext.dirs=open-api-diff/sample-api:lib 
-         -cp target/open-api-diff-0.10.1.jar dk.hoejgaard.openapi.diff.OpenAPIDiff 
+    java -Djava.ext.dirs=open-api-diff/sample-api 
+         -cp target/open-api-diff-0.10.1.jar io.openapitools.openapi.diff.OpenAPIDiff 
              ./sample-api/elaborate_example_v1.json 
              ./sample-api/elaborate_example_v3f.json 
              ./target/output/reports 
@@ -48,8 +48,8 @@ If you want a Markdown report (use the .md file extension):
 
 If you want a HTML report (use the .html file extension):
 
-    java -Djava.ext.dirs=open-api-diff/sample-api:lib 
-         -cp target/open-api-diff-0.10.1.jar dk.hoejgaard.openapi.diff.OpenAPIDiff 
+    java -Djava.ext.dirs=open-api-diff/sample-api 
+         -cp target/open-api-diff-0.10.1.jar io.openapitools.openapi.diff.OpenAPIDiff 
              ./sample-api/elaborate_example_v1.json 
              ./sample-api/elaborate_example_v3f.json
              ./target/output/reports
